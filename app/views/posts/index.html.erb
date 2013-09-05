@@ -1,26 +1,68 @@
-<h1>Listing posts</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>   
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+      <header>
+        <div class="logo"><img src="" alt=""></div>
+      </header>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+      <div class="main">
+
+        <div class="title">
+          <h1>software testing<span>zone</span></h1>                  
+        </div>
+      <div class="post-content">
+
+        <% @posts.each do |post| %>
+          <div class="single-post">
+            <h4><%= post.title %></h4>
+            <div class="post-holder"><%= post.body %></div>
+            <div class="edit-links">
+              <%= link_to 'Show', post %>
+              <%= link_to 'Edit', edit_post_path(post) %>  
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>   
+            </div>
+          </div>
+        <% end %>     
+
+      <div class="edit-links create"><%= link_to 'New Post', new_post_path %></div>
+      
+      </div><!-- /post-content -->
 
 
-<br />
 
-<%= link_to 'New Post', new_post_path %>
+
+
+
+
+      </div><!-- /main -->
+
+
+      <footer><div class="copy">&copy;<h6>uNOTEBOOK</h6>2013</div></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
